@@ -1,0 +1,5 @@
+package com.vera.italia.vera_italia.vera_italia
+
+import io.flutter.embedding.android.FlutterActivity
+
+class MainActivity : FlutterActivity()
