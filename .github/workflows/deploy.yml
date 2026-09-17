@@ -33,7 +33,7 @@ jobs:
         run: flutter pub get
 
       - name: Build Web
-        run: flutter build web --base-href "/Usa/"
+        run: flutter build web --base-href "/Vera-Italia/"
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
