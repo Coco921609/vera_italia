@@ -57,7 +57,7 @@ class FurorePage extends StatelessWidget {
                       scrollDirection: Axis.horizontal,
                       shrinkWrap: true,
                       children: [
-                        _buildImageItem('assets/imag/15.webp'),
+                        _buildImageItem('assets/imag/16.webp'),
                         _buildImageItem('assets/imag/17.jpg'),
                         _buildImageItem('assets/imag/20.jpg'),
                         _buildImageItem('assets/imag/19.webp'),
