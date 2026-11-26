@@ -113,3 +113,77 @@ flutter build web --base-href "/vera_italia/"
   <strong>VERA ITALIA</strong><br>
   <em>Les plus beaux détours sont parfois les moins connus.</em>
 </p>
+
+
+## 🌍 Mes applications
+
+Retrouvez ici les différentes applications et leurs versions Android et iOS/Web.
+
+| Application | Android | iOS / Web |
+|:--|:--|:--|
+| 🇮🇹 **Vera Italia** | [Google Play](https://play.google.com/store/apps/details?id=com.vera.italia.vera_italia) | [Ouvrir](https://coco921609.github.io/vera_italia/) |
+| 🇺🇸 **USA** | [Google Play](https://play.google.com/store/apps/details?id=com.stats.usa) | [Ouvrir](https://coco921609.github.io/Usa/) |
+| 🇫🇷 **France** | Lien à ajouter | Lien à ajouter |
+| 🇪🇬 **Égypte** | Lien à ajouter | Lien à ajouter |
+| 🇧🇪 **Belgique** | [Google Play](https://play.google.com/store/apps/details?id=com.belgique.belgique) | [Ouvrir](https://coco921609.github.io/Belgique/) |
+
+## 🛠️ Ouvrir un projet Flutter dans Android Studio depuis le terminal
+
+Les étapes ci-dessous s'appliquent à **USA, France, Égypte, Belgique et Vera Italia**. Remplacez le chemin par le dossier local du projet que vous souhaitez ouvrir.
+
+### 1. Se placer dans le dossier du projet
+
+**Windows (PowerShell)**
+```powershell
+cd "C:\chemin\vers\votre\projet"
+```
+
+**macOS / Linux**
+```bash
+cd "/chemin/vers/votre/projet"
+```
+
+### 2. Vérifier Flutter et télécharger les dépendances
+
+À exécuter depuis la racine du projet (là où se trouve `pubspec.yaml`) :
+
+```bash
+flutter doctor
+flutter pub get
+```
+
+### 3. Ouvrir le projet dans Android Studio
+
+**Windows (PowerShell)**
+```powershell
+studio .
+```
+Si la commande `studio` n'est pas reconnue, ouvrez Android Studio depuis le menu Démarrer, puis choisissez **Open** et sélectionnez le dossier du projet. Vous pouvez aussi utiliser le chemin de son exécutable `studio64.exe` si nécessaire.
+
+**macOS**
+```bash
+open -a "Android Studio" .
+```
+
+**Linux**
+```bash
+studio .
+```
+Si `studio` n'est pas dans le PATH, lancez Android Studio depuis le menu des applications et ouvrez le dossier du projet.
+
+### 4. Lancer l'application
+
+Branchez un téléphone Android avec le débogage USB activé ou démarrez un émulateur, puis exécutez :
+
+```bash
+flutter devices
+flutter run
+```
+
+Pour générer une version Android :
+
+```bash
+flutter build apk --release
+```
+
+> **Important :** chaque application doit être ouverte depuis son propre dossier Flutter. Les liens de téléchargement et de publication ne remplacent pas le code source du projet. Pour France et Égypte, les liens Android et iOS/Web seront ajoutés dès qu'ils seront disponibles.
