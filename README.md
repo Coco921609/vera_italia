@@ -115,37 +115,18 @@ flutter build web --base-href "/vera_italia/"
 </p>
 
 
-## 🌍 Mes applications
+## ✦ Ouvrir ce projet Flutter dans Android Studio
 
-Retrouvez ici les différentes applications et leurs versions Android et iOS/Web.
+### 1. Cloner le dépôt et entrer dans le dossier
 
-| Application | Android | iOS / Web |
-|:--|:--|:--|
-| 🇮🇹 **Vera Italia** | [Google Play](https://play.google.com/store/apps/details?id=com.vera.italia.vera_italia) | [Ouvrir](https://coco921609.github.io/vera_italia/) |
-| 🇺🇸 **USA** | [Google Play](https://play.google.com/store/apps/details?id=com.stats.usa) | [Ouvrir](https://coco921609.github.io/Usa/) |
-| 🇫🇷 **France** | Lien à ajouter | Lien à ajouter |
-| 🇪🇬 **Égypte** | Lien à ajouter | Lien à ajouter |
-| 🇧🇪 **Belgique** | [Google Play](https://play.google.com/store/apps/details?id=com.belgique.belgique) | [Ouvrir](https://coco921609.github.io/Belgique/) |
-
-## 🛠️ Ouvrir un projet Flutter dans Android Studio depuis le terminal
-
-Les étapes ci-dessous s'appliquent à **USA, France, Égypte, Belgique et Vera Italia**. Remplacez le chemin par le dossier local du projet que vous souhaitez ouvrir.
-
-### 1. Se placer dans le dossier du projet
-
-**Windows (PowerShell)**
-```powershell
-cd "C:\chemin\vers\votre\projet"
-```
-
-**macOS / Linux**
 ```bash
-cd "/chemin/vers/votre/projet"
+git clone https://github.com/Coco921609/vera_italia.git
+cd vera_italia
 ```
 
-### 2. Vérifier Flutter et télécharger les dépendances
+### 2. Vérifier Flutter et installer les dépendances
 
-À exécuter depuis la racine du projet (là où se trouve `pubspec.yaml`) :
+Exécutez ces commandes à la racine du projet, dans le dossier qui contient `pubspec.yaml` :
 
 ```bash
 flutter doctor
@@ -154,36 +135,25 @@ flutter pub get
 
 ### 3. Ouvrir le projet dans Android Studio
 
-**Windows (PowerShell)**
-```powershell
+**Windows (PowerShell), macOS ou Linux** — si la commande `studio` est disponible dans le PATH :
+
+```bash
 studio .
 ```
-Si la commande `studio` n'est pas reconnue, ouvrez Android Studio depuis le menu Démarrer, puis choisissez **Open** et sélectionnez le dossier du projet. Vous pouvez aussi utiliser le chemin de son exécutable `studio64.exe` si nécessaire.
 
-**macOS**
+Sur macOS, vous pouvez aussi utiliser :
+
 ```bash
 open -a "Android Studio" .
 ```
 
-**Linux**
-```bash
-studio .
-```
-Si `studio` n'est pas dans le PATH, lancez Android Studio depuis le menu des applications et ouvrez le dossier du projet.
+Si `studio` n’est pas reconnu, ouvrez Android Studio manuellement, cliquez sur **Open**, puis sélectionnez le dossier `vera_italia`.
 
-### 4. Lancer l'application
+### 4. Démarrer l’application
 
-Branchez un téléphone Android avec le débogage USB activé ou démarrez un émulateur, puis exécutez :
+Démarrez un émulateur Android ou connectez un téléphone avec le débogage USB activé, puis lancez :
 
 ```bash
 flutter devices
 flutter run
 ```
-
-Pour générer une version Android :
-
-```bash
-flutter build apk --release
-```
-
-> **Important :** chaque application doit être ouverte depuis son propre dossier Flutter. Les liens de téléchargement et de publication ne remplacent pas le code source du projet. Pour France et Égypte, les liens Android et iOS/Web seront ajoutés dès qu'ils seront disponibles.
