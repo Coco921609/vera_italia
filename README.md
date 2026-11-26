@@ -115,45 +115,110 @@ flutter build web --base-href "/vera_italia/"
 </p>
 
 
-## ✦ Ouvrir ce projet Flutter dans Android Studio
 
-### 1. Cloner le dépôt et entrer dans le dossier
+## ✦ Ouvrir ce projet Flutter dans Android Studio — Windows, macOS et Linux
+
+Ce guide explique comment récupérer le code source, installer les dépendances et lancer **Vera Italia**. Les étapes sont séparées selon votre système.
+
+### 1. Télécharger le code source
+
+Ouvrez un terminal (PowerShell sous Windows, Terminal sous macOS ou Linux), puis exécutez :
 
 ```bash
 git clone https://github.com/Coco921609/vera_italia.git
 cd vera_italia
 ```
 
-### 2. Vérifier Flutter et installer les dépendances
+Vous pouvez également télécharger le dépôt depuis GitHub avec **Code → Download ZIP**, puis extraire le dossier.
 
-Exécutez ces commandes à la racine du projet, dans le dossier qui contient `pubspec.yaml` :
+### 2. Installer les outils nécessaires
 
-```bash
+Installez **Flutter SDK**, **Git** et **Android Studio** :
+
+- Flutter : [Guide d’installation officiel](https://docs.flutter.dev/get-started/install)
+- Android Studio : [Télécharger Android Studio](https://developer.android.com/studio)
+- Git : [Télécharger Git](https://git-scm.com/downloads)
+
+Dans Android Studio, ouvrez **Settings / Preferences → Plugins**, recherchez **Flutter** et installez le plugin Flutter (le plugin Dart sera également proposé).
+
+### 3. Windows — configuration et ouverture
+
+1. Installez Flutter pour Windows et ajoutez le dossier `flutter/bin` à la variable d’environnement `Path`.
+2. Installez Git et Android Studio.
+3. Ouvrez **PowerShell** et vérifiez la configuration :
+
+```powershell
 flutter doctor
-flutter pub get
 ```
 
-### 3. Ouvrir le projet dans Android Studio
-
-**Windows (PowerShell), macOS ou Linux** — si la commande `studio` est disponible dans le PATH :
+4. Dans Android Studio, choisissez **Open**, puis sélectionnez le dossier `vera_italia` (celui qui contient `pubspec.yaml`).
+5. Dans le terminal intégré d’Android Studio, récupérez les dépendances et démarrez l’application :
 
 ```bash
-studio .
+flutter pub get
+flutter devices
+flutter run
 ```
 
-Sur macOS, vous pouvez aussi utiliser :
+### 4. macOS — configuration et ouverture
+
+1. Installez Flutter pour macOS, Git et Android Studio.
+2. Pour compiler ou lancer la version iOS, installez **Xcode** depuis le Mac App Store, puis acceptez ses conditions et configurez les outils :
+
+```bash
+sudo xcode-select --switch /Applications/Xcode.app/Contents/Developer
+sudo xcodebuild -runFirstLaunch
+flutter doctor
+```
+
+3. Ouvrez le projet dans Android Studio :
 
 ```bash
 open -a "Android Studio" .
 ```
 
-Si `studio` n’est pas reconnu, ouvrez Android Studio manuellement, cliquez sur **Open**, puis sélectionnez le dossier `vera_italia`.
-
-### 4. Démarrer l’application
-
-Démarrez un émulateur Android ou connectez un téléphone avec le débogage USB activé, puis lancez :
+4. Installez les dépendances :
 
 ```bash
+flutter pub get
+```
+
+5. Pour Android, lancez un émulateur ou connectez un appareil, puis exécutez `flutter run`. Pour iOS, sélectionnez un simulateur iPhone ou un iPhone connecté dans Android Studio ou Xcode, puis lancez l’application.
+
+**À savoir :** la compilation et l’exécution sur iOS nécessitent un Mac avec Xcode. Android Studio seul, sous Windows ou Linux, ne permet pas de compiler une application iOS.
+
+### 5. Linux — configuration et ouverture
+
+1. Installez Flutter pour votre distribution Linux, Git et les dépendances système indiquées dans le [guide Flutter pour Linux](https://docs.flutter.dev/get-started/install/linux).
+2. Installez Android Studio et configurez le SDK Android depuis **More Actions → SDK Manager**.
+3. Vérifiez l’installation :
+
+```bash
+flutter doctor
+```
+
+4. Depuis le terminal, placez-vous dans le dossier du projet et ouvrez Android Studio :
+
+```bash
+cd vera_italia
+studio .
+```
+
+5. Dans le terminal intégré, installez les dépendances et démarrez l’application :
+
+```bash
+flutter pub get
 flutter devices
 flutter run
 ```
+
+Si la commande `studio .` n’est pas reconnue, ouvrez Android Studio manuellement, cliquez sur **Open**, puis choisissez le dossier `vera_italia`.
+
+**À savoir :** Flutter ne permet pas de compiler une application iOS depuis Linux. Pour iOS, utilisez un Mac équipé de Xcode.
+
+### 6. Télécharger ou découvrir Vera Italia
+
+- **Android (Google Play) :** [Télécharger Vera Italia](https://play.google.com/store/apps/details?id=com.vera.italia.vera_italia)
+- **iOS / Web :** [Ouvrir Vera Italia](https://coco921609.github.io/vera_italia/)
+- **Code source :** [Coco921609/vera_italia sur GitHub](https://github.com/Coco921609/vera_italia)
+
